@@ -235,7 +235,7 @@ header > .container{
   align-items: center;
 }
 .home__pattern{
-  background-image: url('assets/img/pattern.png') ;
+  background-image: url('../img/pattern.png') ;
   /* display: none; */
   background-size: 100%;
   opacity: .09;
@@ -331,7 +331,7 @@ header > .container{
   top: 0;right: 0;
   width: 50%;
   height: 100%;
-  background-image: url('assets/img/home.jpg');
+  background-image: url('../img/home.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -524,7 +524,7 @@ header > .container{
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    background-image: url('assets/img/home.jpg');
+    background-image: url('../img/home.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

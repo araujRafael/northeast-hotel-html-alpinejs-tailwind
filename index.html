@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--=============== FAVICON ===============-->
+	<link rel="shortcut icon" href="" type="image/x-icon">
+
+	<!--=============== REMIX ICONS ===============-->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+	<!--=============== LINEICONS ICONS ===============-->
+	<link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+
+
+	<!--=============== SWIPER CSS ===============-->
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+	<!--=============== CSS ===============-->
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<title>NorthEast Hotel - AreaCode</title>
+
+	<!-- Alpine.js -->
+	<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+	<!--=============== TAILWINDCSS ===============-->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						'primary': "var(--primary)",
+						"primary-alt": "var(--primary-alt)",
+					},
+					background: {
+						'primary': "var(--primary)",
+						"primary-alt": "var(--primary-alt)",
+					}
+				}
+			}
+		}
+	</script>
+	<style type="text/tailwindcss">
+		@layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+	<style type="text/tailwindcss">
+		@layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+	<!-- DatePicker -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/datepicker.min.js"></script>
+	<!-- Cuunter Button -->
+	<style>
+		input[type='number']::-webkit-inner-spin-button,
+		input[type='number']::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		.custom- number-input input:focus {
+			outline: none !important;
+		}
+
+		.custom- number-input button:focus {
+			outline: none !important;
+		}
+	</style>
+
+</head>
+
+<body>
+	<!--==================== HEADER ====================-->
+	<header class="header" id="header">
+		<div class="container">
+			<div class="header__container">
+				<h1>
+					<a href="/">
+						NorthEast Hotel
+					</a>
+				</h1>
+				<div class="menu__wrap">
+					<menu class="menu" id="menu">
+						<i class="menu__icon ri-menu-line"></i>
+					</menu>
+					<div class="menu__dropdown">
+						<ul class="w-full h-full py-3 px-4 flex flex-col items-center justify-between">
+							<li>home</li>
+							<li>Hotels</li>
+							<li>States</li>
+							<li>Packages</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</header>
+
+	<!--==================== MAIN ====================-->
+	<main class="main" x-data="{ open: false }" x-init="() => { open = true }">
+		<!--==================== HOME ====================-->
+		<section class="home section" id="home">
+			<!-- ====== Pattern ====== -->
+			<div class="home__pattern"></div>
+			<!-- ====== Wrap img & Scheduler ====== -->
+			<div class="home__img__wrap">
+
+			</div>
+			<!-- ========== Hero ========== -->
+			<!-- container -->
+			<div class="container md:!mt-auto" x-data="{ open: false }" x-init="() => { open = true }">
+				<div class="home__container mt-16">
+					<h1 class="section__title !text-amber-400">
+						Brazillian&#39;s Paradise
+					</h1>
+					<div class="home__icons__container">
+						<div class="home__icons__wrap">
+							<i class="home__icon lni lni-bi-cycle"></i>
+							<i class="home__icon lni lni-travel"></i>
+							<i class="home__icon lni lni-surf-board"></i>
+						</div>
+						<button class="button text-white">
+							Hotels Details
+							<i class="home__icon lni lni-arrow-right"></i>
+						</button>
+					</div>
+					<p class="section__subtitle">
+						<q>
+							Lorem ipsum dolor sit amet <br />consectetur adipisicing elit. <br />Omnis atque reiciendis
+						</q>
+					</p>
+				</div>
+				<!--=========== schedule ===========-->
+				<div x-show="open" class="home__schedule__wrap " x-transition:enter="transition ease-in-out duration-[800ms]"
+					x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+					<div class="home__schedule p-3">
+						<h1 class="text-white py-2 text-xl">
+							Schedule Your Travel
+						</h1>
+						<!-- Schedule Travel -->
+						<div date-rangepicker class="w-full flex items-center justify-center">
+							<div class="relative w-[50%]">
+								<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+									<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+										xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+										<path
+											d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+									</svg>
+								</div>
+								<input name="start" type="text"
+									class="!bg-primary border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:!bg-primary dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+									placeholder="Select date start">
+							</div>
+							<span class="mx-4 text-gray-300">to</span>
+							<div class="relative w-[50%]">
+								<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+									<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+										xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+										<path
+											d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+									</svg>
+								</div>
+								<input name="end" type="text"
+									class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:!bg-primary dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+									placeholder="Select date end">
+							</div>
+						</div>
+						<!-- Schedule Travel -->
+						<!-- Persons Config Travel -->
+						<div class="flex gap-2 flex-col">
+							<!-- Incfremnets e Decrements -->
+							<div class="flex flex-row sm:flex-row gap-2">
+								<div class="w-min flex gap-2">
+									<p class="my-auto text-gray-300">Adults</p>
+									<div class="h-10  sm:w-[165px] w-[95px] flex items-center justify-center flex-row-reverse h-min">
+										<div class="!bg-primary flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+											<button data-action="decrement"
+												class=" !bg-primary current hover:text-primary-alt !hover:bg-body-alt h-full w-20 rounded-l cursor-pointer outline-none">
+												<span class="m-auto text-2xl font-thin">-</span>
+											</button>
+											<input type="number"
+												class="outline-none focus:outline-none text-center w-full !bg-primary !focus:text-body-alt font-semibold text-md hover:text-primary-alt focus:text-black  md:text-basecursor-default flex items-center text-current  outline-none"
+												name="custom-input-number" value="0">
+											<button data-action="increment"
+												class="!bg-primary current hover:text-primary-alt !hover:bg-body-alt h-full w-20 rounded-r cursor-pointer">
+												<span class="m-auto text-2xl font-thin">+</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="w-f flex gap-2">
+									<p class="my-auto text-gray-300">Children</p>
+									<div class="h-10  sm:w-[165px] w-[95px] flex items-center justify-center flex-row-reverse h-min">
+										<div class="!bg-primary flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+											<button data-action="decrement"
+												class=" !bg-primary current hover:text-primary-alt !hover:bg-body-alt h-full w-20 rounded-l cursor-pointer outline-none">
+												<span class="m-auto text-2xl font-thin">-</span>
+											</button>
+											<input type="number"
+												class="outline-none focus:outline-none text-center w-full !bg-primary !focus:text-body-alt font-semibold text-md hover:text-primary-alt focus:text-black  md:text-basecursor-default flex items-center text-current  outline-none"
+												name="custom-input-number" value="0">
+											<button data-action="increment"
+												class="!bg-primary current hover:text-primary-alt !hover:bg-body-alt h-full w-20 rounded-r cursor-pointer">
+												<span class="m-auto text-2xl font-thin">+</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Scheduler Button -->
+							<div class="w-full ">
+								<button class="button !min-h-full !py-[9px] !mt-[3.5px]">
+									Scheduler
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--=========== schedule ===========-->
+			</div>
+			<!-- container -->
+
+		</section>
+
+		<!--==================== guide ====================-->
+		<section id="guide" class="guide section">
+			<div class="container mx-auto py-[10vh]">
+				<div class="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
+					<div class="flex-1 sm:hidden lg:block">
+						<img
+							src="https://149363815.v2.pressablecdn.com/wp-content/uploads/2022/12/ROAR-Blog-post-2022-12-20T171020.842.jpg"
+							class="md:max-w-lg sm:rounded-lg" alt="">
+					</div>
+					<div class="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
+						<h3 class="text-amber-500 font-semibold">
+							Professional services
+						</h3>
+						<p class="text-white text-3xl font-semibold sm:text-4xl">
+							We will guide you through check in and check out
+						</p>
+						<p class="mt-3 text-gray-300">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptates saepe iure, iste nobis
+							eligendi asperiores accusantium quidem deserunt magnam. Unde consectetur quaerat nesciunt veniam quis
+							distinctio animi! Dicta, perspiciatis!</p>
+						<a href="javascript:void(0)"
+							class="inline-flex gap-x-1 items-center text-amber-500 hover:text-amber-300 duration-150 font-medium">
+							Learn more
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+								<path fill-rule="evenodd"
+									d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+									clip-rule="evenodd"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--==================== HOTELS ====================-->
+		<section id="hotels" class="section">
+			<div class="container py-[10vh]">
+				<div id="default-carousel" class="relative" data-carousel="static">
+					<!-- Carousel wrapper -->
+					<div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+						<!-- Item 1 -->
+						<div class="hidden duration-700 ease-in-out" data-carousel-item>
+							<span
+								class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First
+								Slide</span>
+							<img
+								src="https://www.kayak.com.br/rimg/himg/1e/dd/4c/expediav2-35892-372995-884682.jpg?width=1366&height=768&crop=true"
+								class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+						</div>
+						<!-- Item 2 -->
+						<div class="hidden duration-700 ease-in-out" data-carousel-item>
+							<img
+								src="https://media-magazine.trivago.com/wp-content/uploads/2018/09/05143056/hoteis-valem-viagem-nordeste-kenoa.jpg"
+								class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+						</div>
+						<!-- Item 3 -->
+						<div class="hidden duration-700 ease-in-out" data-carousel-item>
+							<img
+								src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/10/resort-viva-porto-de-galinhas-1-820x573.jpg"
+								class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+						</div>
+					</div>
+					<!-- Slider indicators -->
+					<div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+						<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
+							data-carousel-slide-to="0"></button>
+						<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+							data-carousel-slide-to="1"></button>
+						<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+							data-carousel-slide-to="2"></button>
+					</div>
+					<!-- Slider controls -->
+					<button type="button"
+						class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+						data-carousel-prev>
+						<span
+							class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary dark:bg-primary/30 group-hover:bg-primary/20 dark:group-hover:bg-primary/60 group-focus:ring-4 group-focus:ring-primary dark:group-focus:ring-primary/70 group-focus:outline-none">
+							<svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-white" fill="none" stroke="currentColor"
+								viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+							</svg>
+							<span class="hidden">Previous</span>
+						</span>
+					</button>
+					<button type="button"
+						class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+						data-carousel-next>
+						<span
+							class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary dark:bg-primary/30 group-hover:bg-primary/20 dark:group-hover:bg-primary/60 group-focus:ring-4 group-focus:ring-primary dark:group-focus:ring-primary/70 group-focus:outline-none">
+							<svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-white" fill="none" stroke="currentColor"
+								viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+							</svg>
+							<span class="hidden">Next</span>
+						</span>
+					</button>
+				</div>
+
+				<p class="mt-5">We look for the best hotels for your comfort.
+				</p>
+				<script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+			</div>
+		</section>
+
+		<!--==================== faqa ====================-->
+		<section id="faqs" class="popular section">
+			<div class="container py-[10vh]" x-data="{ faqsList: [
+  {
+    q: 'What are some random questions to ask?',
+    a: 'That\'s exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you\'re able to find the perfect random question.'
+  },
+  {
+    q: 'Do you include common questions?',
+    a: 'This generator doesn\'t include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator.'
+  },
+  {
+    q: 'Can I use this for 21 questions?',
+    a: 'Yes! there are two ways that you can use this question generator depending on what you\'re after. You can indicate that you want 21 questions generated.'
+  },
+  {
+    q: 'Are these questions for girls or for boys?',
+    a: 'The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with).'
+  },
+  {
+    q: 'What do you wish you had more talent doing?',
+    a: 'If you\'ve been searching for a way to get random questions, you\'ve landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.'
+  },
+  {
+    q: 'What are some random questions to ask?',
+    a: 'That\'s exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you\'re able to find the perfect random question to ask friends.'
+  }
+] }">
+				<div class="leading-relaxed mt-12 mx-4 md:mx-8">
+					<div class="text-center space-y-3">
+						<h1 class="block text-amber-500 text-3xl font-semibold">
+							Frequently Asked Questions
+						</h1>
+						<p class="text-white max-w-lg mx-auto">
+							Answered all frequently asked questions. Can’t find the answer
+							you’re looking for? feel free to contact us.
+						</p>
+					</div>
+					<div class="relative bg-primary-alt rounded-md mt-10 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl sm:mx-auto"
+						style="box-shadow: 0px 7px 20px 7px #00000052">
+						<div class="grid gap-4 py-8 md:grid-cols-2">
+							<template x-for="(item, idx) in faqsList" :key="idx">
+								<div class="space-y-3 mt-6 px-8">
+									<h4 class="text-white text-xl font-semibold" x-text="item.q">
+										<!-- Question -->
+									</h4>
+									<p class="text-gray-400" x-text="item.a">
+										<!-- Answer -->
+									</p>
+								</div>
+							</template>
+						</div>
+						<span class="w-0.5 h-full bg-primary absolute top-0 left-0 mx-auto right-0 hidden md:block"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--==================== FEATURED ====================-->
+		<!-- <section class="featured section" id="featured">
+
+		</section> -->
+
+		<!--==================== OFFER ====================-->
+		<!-- <section class="offer section">
+
+		</section> -->
+
+		<!--==================== LOGOS ====================-->
+		<!-- <section class="logos section">
+
+		</section> -->
+	</main>
+
+	<!--==================== FOOTER ====================-->
+	<footer class="footer section">
+		<div x-data="{
+		footerNavs: [
+		{
+			label: 'Resources',
+			items: [
+					{
+							href: 'javascript:void()',
+							name: 'contact'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'Support'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'Documentation'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'Pricing'
+					},
+			],
+	},
+	{
+			label: 'About',
+			items: [
+					{
+							href: 'javascript:void()',
+							name: 'Terms'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'License'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'Privacy'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'About US'
+					},
+			]
+	},
+	{
+			label: 'Explore',
+			items: [
+					{
+							href: 'javascript:void()',
+							name: 'Showcase'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'Roadmap'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'Languages'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'Blog'
+					},
+			]
+	},
+	{
+			label: 'Company',
+			items: [
+					{
+							href: 'javascript:void()',
+							name: 'Partners'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'Team'
+					},
+					{
+							href: 'javascript:void()',
+							name: 'Careers'
+					},
+			],
+	}
+		]
+	}">
+			<footer class="pt-10">
+				<div class="max-w-screen-xl mx-auto px-4 md:px-8">
+					<div class="justify-between items-center gap-12 md:flex">
+						<div class="flex-1 max-w-lg">
+							<h3 class="text-2xl font-bold">
+								Get our beautiful newsletter straight to your inbox.
+							</h3>
+						</div>
+						<div class="flex-1 mt-6 md:mt-0">
+							<form @submit.prevent="null" class="flex items-center gap-x-3 md:justify-end">
+								<div class="relative">
+									<svg class="w-6 h-6 text-gray-400 absolute left-3 inset-y-0 my-auto"
+										xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="{1.5}"
+										stroke="currentColor">
+										<path strokeLinecap="round" strokeLinejoin="round"
+											d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+									</svg>
+									<input type="email" required placeholder="Enter your email"
+										class="w-full pl-12 pr-3 py-2 text-white bg-primary-alt outline-none border focus:border-primary shadow-sm rounded-lg" />
+								</div>
+								<button
+									class="block w-auto py-3 px-4 font-medium text-sm text-center text-white bg-primary-alt hover:bg-primary active:bg-primary active:shadow-none rounded-lg shadow">
+									Subscribe
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0">
+						<template x-for="(item, idx) in footerNavs" :key="idx">
+							<ul class="space-y-4 text-gray-400">
+								<h4 class="text-white font-semibold sm:pb-2" x-text="item.label"></h4>
+								<template x-for="(el, elIdx) in item.items" :key="elIdx">
+									<li>
+										<a :href="el.href" class="hover:text-gray-100 duration-150" x-text="el.name"></a>
+									</li>
+								</template>
+							</ul>
+						</template>
+					</div>
+					<div class="mt-10 py-10 border-t items-center justify-between sm:flex">
+						<p class="text-gray-400">
+							© 2022 Float UI Inc. All rights reserved.
+						</p>
+						<div class="flex items-center gap-x-6 text-gray-400 mt-6">
+							<a href="javascript:void()">
+								<svg class="w-6 h-6 hover:text-gray-500 duration-150" fill="none" viewBox="0 0 48 48">
+									<g clip-path="url(#a)">
+										<path fill="currentColor"
+											d="M48 24C48 10.745 37.255 0 24 0S0 10.745 0 24c0 11.979 8.776 21.908 20.25 23.708v-16.77h-6.094V24h6.094v-5.288c0-6.014 3.583-9.337 9.065-9.337 2.625 0 5.372.469 5.372.469v5.906h-3.026c-2.981 0-3.911 1.85-3.911 3.75V24h6.656l-1.064 6.938H27.75v16.77C39.224 45.908 48 35.978 48 24z" />
+									</g>
+									<defs>
+										<clipPath id="a">
+											<path fill="#fff" d="M0 0h48v48H0z" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<a href="javascript:void()">
+								<svg class="w-6 h-6 hover:text-gray-500 duration-150" fill="none" viewBox="0 0 48 48">
+									<g clip-path="url(#clip0_17_80)">
+										<path fill="currentColor"
+											d="M15.1 43.5c18.11 0 28.017-15.006 28.017-28.016 0-.422-.01-.853-.029-1.275A19.998 19.998 0 0048 9.11c-1.795.798-3.7 1.32-5.652 1.546a9.9 9.9 0 004.33-5.445 19.794 19.794 0 01-6.251 2.39 9.86 9.86 0 00-16.788 8.979A27.97 27.97 0 013.346 6.299 9.859 9.859 0 006.393 19.44a9.86 9.86 0 01-4.462-1.228v.122a9.844 9.844 0 007.901 9.656 9.788 9.788 0 01-4.442.169 9.867 9.867 0 009.195 6.843A19.75 19.75 0 010 39.078 27.937 27.937 0 0015.1 43.5z" />
+									</g>
+									<defs>
+										<clipPath id="clip0_17_80">
+											<path fill="#fff" d="M0 0h48v48H0z" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<a href="javascript:void()">
+								<svg class="w-6 h-6 hover:text-gray-500 duration-150" fill="none" viewBox="0 0 48 48">
+									<g fill="currentColor" clip-path="url(#clip0_910_44)">
+										<path fill-rule="evenodd"
+											d="M24 1A24.086 24.086 0 008.454 6.693 23.834 23.834 0 00.319 21.044a23.754 23.754 0 003.153 16.172 23.98 23.98 0 0012.938 10.29c1.192.221 1.641-.518 1.641-1.146 0-.628-.024-2.45-.032-4.442-6.676 1.443-8.087-2.817-8.087-2.817-1.089-2.766-2.663-3.493-2.663-3.493-2.178-1.478.163-1.45.163-1.45 2.413.17 3.68 2.461 3.68 2.461 2.138 3.648 5.616 2.593 6.983 1.976.215-1.545.838-2.596 1.526-3.193-5.333-.6-10.937-2.647-10.937-11.791a9.213 9.213 0 012.472-6.406c-.246-.6-1.069-3.026.234-6.322 0 0 2.015-.64 6.602 2.446a22.904 22.904 0 0112.017 0c4.583-3.086 6.594-2.446 6.594-2.446 1.307 3.288.484 5.714.238 6.322a9.194 9.194 0 012.476 6.414c0 9.163-5.615 11.183-10.957 11.772.859.742 1.626 2.193 1.626 4.421 0 3.193-.028 5.762-.028 6.548 0 .636.433 1.38 1.65 1.146a23.98 23.98 0 0012.938-10.291 23.754 23.754 0 003.151-16.175A23.834 23.834 0 0039.56 6.69 24.086 24.086 0 0024.009 1H24z"
+											clip-rule="evenodd" />
+										<path
+											d="M9.089 35.264c-.052.119-.243.154-.398.071-.155-.083-.27-.237-.214-.36.056-.122.242-.154.397-.07.155.082.274.24.215.359zM10.063 36.343a.4.4 0 01-.493-.11c-.155-.167-.187-.396-.068-.499.12-.102.334-.055.489.11.155.167.19.396.072.499zM11.008 37.714c-.147.103-.397 0-.536-.206a.395.395 0 010-.569c.147-.098.397 0 .537.202.139.202.143.47 0 .573zM12.292 39.042c-.131.146-.397.106-.616-.091-.219-.198-.27-.467-.139-.609.131-.142.397-.102.624.091.226.194.27.466.131.609zM14.092 39.816c-.06.186-.33.269-.6.19-.27-.08-.449-.3-.397-.49.051-.19.326-.277.6-.19.274.087.449.297.397.49zM16.056 39.95c0 .194-.223.36-.509.364-.286.004-.52-.154-.52-.348 0-.193.222-.36.508-.363.286-.004.52.15.52.347zM17.884 39.646c.036.194-.163.395-.45.443-.285.047-.536-.067-.572-.257-.035-.19.171-.395.45-.447.278-.05.536.068.572.261z" />
+									</g>
+									<defs>
+										<clipPath id="clip0_910_44">
+											<path fill="#fff" d="M0 0h48v48H0z" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<a href="javascript:void()">
+								<svg class="w-6 h-6 hover:text-gray-500 duration-150" fill="currentColor" viewBox="0 0 48 48">
+									<g clip-path="url(#clip0_17_63)">
+										<path
+											d="M24 4.322c6.413 0 7.172.028 9.694.14 2.343.104 3.61.497 4.453.825 1.116.432 1.922.957 2.756 1.791.844.844 1.36 1.64 1.79 2.756.329.844.723 2.12.826 4.454.112 2.53.14 3.29.14 9.693 0 6.413-.028 7.172-.14 9.694-.103 2.344-.497 3.61-.825 4.453-.431 1.116-.957 1.922-1.79 2.756-.845.844-1.642 1.36-2.757 1.791-.844.328-2.119.722-4.453.825-2.532.112-3.29.14-9.694.14-6.413 0-7.172-.028-9.694-.14-2.343-.103-3.61-.497-4.453-.825-1.115-.431-1.922-.956-2.756-1.79-.844-.844-1.36-1.641-1.79-2.757-.329-.844-.723-2.119-.826-4.453-.112-2.531-.14-3.29-.14-9.694 0-6.412.028-7.172.14-9.694.103-2.343.497-3.609.825-4.453.431-1.115.957-1.921 1.79-2.756.845-.844 1.642-1.36 2.757-1.79.844-.329 2.119-.722 4.453-.825 2.522-.113 3.281-.141 9.694-.141zM24 0c-6.516 0-7.331.028-9.89.14-2.55.113-4.304.526-5.822 1.116-1.585.619-2.926 1.435-4.257 2.775-1.34 1.332-2.156 2.672-2.775 4.247C.666 9.806.253 11.55.141 14.1.028 16.669 0 17.484 0 24s.028 7.331.14 9.89c.113 2.55.526 4.304 1.116 5.822.619 1.585 1.435 2.925 2.775 4.257a11.732 11.732 0 004.247 2.765c1.528.591 3.272 1.003 5.822 1.116 2.56.112 3.375.14 9.89.14 6.516 0 7.332-.028 9.891-.14 2.55-.113 4.303-.525 5.822-1.116a11.732 11.732 0 004.247-2.765 11.732 11.732 0 002.766-4.247c.59-1.528 1.003-3.272 1.115-5.822.113-2.56.14-3.375.14-9.89 0-6.516-.027-7.332-.14-9.891-.112-2.55-.525-4.303-1.115-5.822-.591-1.594-1.407-2.935-2.747-4.266a11.732 11.732 0 00-4.247-2.765C38.194.675 36.45.262 33.9.15 31.331.028 30.516 0 24 0z" />
+										<path
+											d="M24 11.672c-6.806 0-12.328 5.522-12.328 12.328 0 6.806 5.522 12.328 12.328 12.328 6.806 0 12.328-5.522 12.328-12.328 0-6.806-5.522-12.328-12.328-12.328zm0 20.325a7.998 7.998 0 010-15.994 7.998 7.998 0 010 15.994zM39.694 11.184a2.879 2.879 0 11-2.878-2.878 2.885 2.885 0 012.878 2.878z" />
+									</g>
+									<defs>
+										<clipPath id="clip0_17_63">
+											<path d="M0 0h48v48H0z" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</footer>
+
+
+	<!--========== SCROLL UP ==========-->
+
+
+	<!--=============== SCROLL REVEAL ===============-->
+	<script src="assets/js/scrollreveal.min.js"></script>
+
+	<!--=============== SWIPER JS ===============-->
+	<script src="assets/js/swiper-bundle.min.js"></script>
+
+	<!--=============== MIXITUP JS ===============-->
+	<script src="assets/js/mixitup.min.js"></script>
+	<!--=============== MAIN JS ===============-->
+	<script src="assets/js/main.js" defer></script>
+
+	<!-- Datepicker -->
+
+	<style>
+		input[type='number']::-webkit-inner-spin-button,
+		input[type='number']::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		.custom-number-input {
+			height: min-content;
+		}
+
+		.custom-number-input input:focus {
+			outline: none !important;
+		}
+
+		.custom-number-input button:focus {
+			outline: none !important;
+		}
+	</style>
+
+	<script>
+		function decrement(e) {
+			const btn = e.target.parentNode.parentElement.querySelector(
+				'button[data-action="decrement"]'
+			);
+			const target = btn.nextElementSibling;
+			let value = Number(target.value);
+			value--;
+			if (value < 0) return
+			target.value = value;
+		}
+
+		function increment(e) {
+			const btn = e.target.parentNode.parentElement.querySelector(
+				'button[data-action="decrement"]'
+			);
+			const target = btn.nextElementSibling;
+			let value = Number(target.value);
+			value++;
+			target.value = value;
+		}
+
+		const decrementButtons = document.querySelectorAll(
+			`button[data-action="decrement"]`
+		);
+
+		const incrementButtons = document.querySelectorAll(
+			`button[data-action="increment"]`
+		);
+
+		decrementButtons.forEach(btn => {
+			btn.addEventListener("click", decrement);
+		});
+
+		incrementButtons.forEach(btn => {
+			btn.addEventListener("click", increment);
+		});
+	</script>
+
+</body>
+
+</html>
